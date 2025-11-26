@@ -26,9 +26,16 @@ def menu(choices, title="Erik's Menu", prompt="Choose your item: "):
     return answer
 
 
-drinks = ["chocolate", "coffee", "decaf"]
-flavors = ["caramel", "vanilla", "peppermint", "raspberry", "plain"]
-toppings = ["chocolate", "cinnamon", "caramel"]
+def read_menu(filename):
+    with open(filename) as f:
+        temp = f.readlines()
+        result = [item.strip() for item in temp]
+    return result
+
+
+drinks = read_menu("drinks.txt")
+flavors = read_menu("flavors.txt")
+toppings = read_menu("toppings.txt")
 
 drink = menu(drinks)
 flavor = menu(flavors, "Erik's flavors", "Choose your flavor: ")
