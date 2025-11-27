@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Bruce",
+        "drink": "chocolate",
+        "flavor": "plain",
+        "topping": "vanilla powder"
+    },
+    {
+        "name": "Alfred",
+        "drink": "coffee",
+        "flavor": "peppermint",
+        "topping": "vanilla powder"
+    }
+]
