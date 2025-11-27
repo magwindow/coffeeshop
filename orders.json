@@ -10,5 +10,11 @@
         "drink": "coffee",
         "flavor": "peppermint",
         "topping": "vanilla powder"
+    },
+    {
+        "name": "Alex",
+        "drink": "coffee",
+        "flavor": "caramel",
+        "topping": "caramel"
     }
 ]
