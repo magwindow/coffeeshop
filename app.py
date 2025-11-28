@@ -24,9 +24,18 @@ def get_orders():
 
 
 def read_menu(filename):
-    with open(filename) as f:
-        temp = f.readlines()
-        result = [item.strip() for item in temp]
+    try:
+        with open(filename) as f:
+            result = [item.strip() for item in f.readlines()]
+    except FileNotFoundError:
+        print(f"Error: The file '{filename}' could not be found.")
+        result = []
+    except PermissionError:
+        print(f"Error: You do not have permission to read the file '{filename}'.")
+        result = []
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+        result = []
     return result
 
 
